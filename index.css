@@ -173,6 +173,10 @@ header {
     background-color: #769c02;
 }
 
+.product-text_first {
+    margin-top: 70px;
+}
+
 .product-list {
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* COMO TENEMOS 6 PRODUCTOS, PONEMOS 6 COMO PRIMER VALOR */
