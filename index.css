@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap');
+
+html{
+    box-sizing: border-box;
+} 
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    line-height: 2;
+    font-size: 16px;
+}
+
+/* GLOBALES */
+
+h2 span {
+    color: #f0d41c;
+}
+
+
+section h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    max-width: 100%; /* LA IMAGEN COGERÁ EL ANCHO TOTAL DISPONIBLE DEL DIV */
+    display: block; /* PONERLO EN BLOCK, HARÁ QUE SE ELIMINE ESE ESPACIO EN BLANCO ENTRE LAS CATEGORIAS Y LA IMAGEN SUPERIOR */
+}
+
+/* HEADER Y NAVEGACIÓN */
+
+header img {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: inline; /* LO AÑADIMOS PARA PODER CENTRAR LA IMAGEN */
+    text-align: center;
+}
+
+header {
+    text-align: center;
+} 
+
+.nav-container {
+    border-top: 1px solid #e1e1e1;
+}
+
+.main-navegation {
+    padding: 20px 0;
+    display: flex; /* SI NO PONGO FLEX, NO TENGO ACCESO A JUSTIFY CONTENT Y A ALIGN ITEMS */
+    /* text-transform: uppercase; */
+    flex-direction: row; /* APLICADA POR DEFECTO. SI USARAMOS COLUMN, SOLO PODRIAMOS APLICAR LA PROPIEDAD ALIGN ITEMS O TEXT ALIGN */
+    justify-content: space-around;
+    font-weight: bold;
+    font-family: "Karla";
+}
+
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+/* HERO */
+
+.hero {
+    background-image: url(./assets/principal.jpg);
+    background-repeat: no-repeat; /* LA IMAGEN DE FONDO, AL TERMINAR, NO SE REPITE*/
+    background-size: cover; /* LA IMAGEN SE ESTIRA COMPLETANDO EL ANCHO DE LA PANTALLA */
+    /* background-position: 1px 1px; EL PRIMER VALOR MUEVE LA IMAGEN A LA IZQUIERDA Y A LA DERECHA, Y EL SEGUNDO ARRIBA Y ABAJO */
+    background-position: center center; /* CENTRA LA IMAGEN POR COMPLETO */
+    height: 550px;
+}
+
+/* CATEGORÍAS DE PRODUCTO */
+
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* NOS PERMITE CREAR COLUMNAS. EL PRIMER PARAMETRO SERÁ LAS VECES QUE SE REPITE Y EL SEGUNDO EL TAMAÑO. NO SE RECOMIENDA USAR PX, MEJOR FR, QUE DIVIDE LAS COLUMNAS EN FRACCIONES (fr3, fr1) */
+    gap: 20px; /* TOMA LA DISTANCIA ENTRE LAS IMAGENES */
+}
+
+.categorie a {
+    display: block; /* PONEMOS BLOCK PARA PODER ALINEAR LOS TEXTOS */
+    text-align: center;
+    padding: 20px;
+    font-family: "Karla";
+}
+
+.categorie a:hover {
+    background-color: #f0d41c;
+    font-size: 18px;
+}
+
+.categories h2 {
+    padding: 20px;
+}
+
+/* SOBRE NOSOTROS */
+
+.about {
+    background-image: linear-gradient( to right, transparent 50%, #f0d41c 50%, #f0d41c 100%), url(../muebles-project/assets/nosotros.jpg);
+    padding: 100px 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 100%, 700px;
+    margin-top: 50px;
+}
+
+.about h2 {
+    text-align: left;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+}
+
+.about-text {
+    grid-column: 2/3;
+}
+
+/* LISTA DE PRODUCTOS */
+
+.main-content {
+    text-align: center;
+}
+
+.main-content h2 {
+    padding: 20px;
+}
+
+.product {
+    background-color: #f0d41c;
+}
+
+.product-text {
+    text-align: center;
+    color: black;
+    padding: 20px;
+}
+
+.product-text .price {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.product-text h3 {
+    margin: 0;
+}
+
+.product-text p {
+    margin: 0 0 5px 0;
+}
+
+.product-text a {
+    display: block; /* HACE QUE EL BOTON COJA TODO EL ANCHO DISPONIBLE */
+    background-color: #8cbc00;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 2px;
+    transition: background-color .3s ease-out;
+}
+
+.product-text a:hover {
+    background-color: #769c02;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* COMO TENEMOS 6 PRODUCTOS, PONEMOS 6 COMO PRIMER VALOR */
+    gap: 10px;
+}
+
+.product:nth-child(1) {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 7; /* ESTO HACE QUE EL PRIMER PRODUCTO SE POSICIONE ARRIBA DEL TODO SOLO. LA PANTALLA ESTÁ DIVIDIDA EN 7 PARTES, POR LO QUE POR ESO OCUPA TODO EL ANCHO, PORQUE VA DEL 1 AL 7 */
+    grid-template-columns: 3fr 1fr;
+}
+
+.product:nth-child(1) img {
+    height: 430px;
+    width: 100%;
+    object-fit: cover; /* POSICIONA LA IMAGEN DENTRO DE UN CONTENIDO SIN DEFORMAR LA IMAGEN. */
+}
+
+.product:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.product:nth-child(2) img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover; 
+}
+
+.product:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.product:nth-child(3) img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.product:nth-child(4) img {
+    height: 430px;
+    width: 100%;
+    object-fit: cover; 
+}
+
+.product:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.product:nth-child(5) img {
+    height: 430px;
+    width: 100%;
+    object-fit: cover; 
+}
+
+.product:nth-child(6) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.product:nth-child(6) img {
+    height: 430px;
+    width: 100%;
+    object-fit: cover; 
+}
+/* FOOTER */
+
+.site-footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 50px;
+    padding-top: 15px;
+    justify-content: space-around;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer-menu a {
+    display: block;
+}
+
+.site-footer h3 {
+    margin-bottom: 5px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    background-color: #f0d41c;
+    margin-bottom: 0px;
+}
+
+.categorie-footer {
+    padding-left: 180px;
+}
+
+
+
+
