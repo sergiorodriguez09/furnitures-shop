@@ -40,9 +40,15 @@ img {
     color: white;
     text-transform: uppercase;
     font-weight: 900;
-    padding: 2px;
+    padding: 5px;
     transition: background-color .3s ease-out;
     max-width: 300px;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #769c02;
+    cursor: pointer; /* APARECE EL CURSOR DE LA MANO CUANDO LO PASAS POR ENCIMA */
 }
 
 /* HEADER Y NAVEGACIÓN */
@@ -312,6 +318,12 @@ header {
 
 /* BLOG */
 
+.btn {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+}
+
 .guide {
     text-align: left;
 }
@@ -385,4 +397,54 @@ header {
     height: 400px;
     width: 400px;
     object-fit: cover;
+}
+
+/* CONTACTO */
+
+legend {
+    text-align: left;
+    display: block;
+}
+
+.campo {
+    text-align: left;
+}
+
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form fieldset {
+   border: 1px solid black;
+   margin-bottom: 20px;
+}
+
+.form legend {
+    background-color: #f0d41c;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    flex-basis: 100px;   /* SI EL CONTENEDOR TIENE FLEX, LO QUE HACE ES QUE TODOS LOS CAMPOS QUEDEN DEL MISMO TAMAÑO Y ALINEADOS  */
+}
+
+  .campo input[type="text"],
+  .campo input[type="tel"],
+  .campo input[type="email"],
+  .campo select {
+    flex: 1; /* AL NO HABER MÁS ELEMENTOS AL LADO DEL INPUT, COGE TODO EL ESPACIO DISPONIBLE */
+    border: 1px solid black;
+    padding: 10px;
 }

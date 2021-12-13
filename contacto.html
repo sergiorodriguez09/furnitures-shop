@@ -31,6 +31,69 @@
 
     <main class="main-content container">
         <h2>Contacto</h2>
+        <form class="form" action="#">
+            <fieldset>
+                <legend>Tus datos</legend>
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label>
+                        <input id="nombre" type="text" placeholder="Escribe tu nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="asunto">Asunto:</label>
+                        <input id="asunto" type="text" placeholder="Tu asunto" required>
+                    </div>
+                    <div class="campo">
+                        <label for="tel">Teléfono:</label>
+                        <input id="tel" type="text" placeholder="Escribe tu teléfono" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-mail:</label>
+                        <input id="email" type="email" placeholder="Escribe tu e-mail" required>
+                    </div>
+                    <div class="campo">
+                        <label for="mensaje">Mensaje:</label>  
+                        <textarea name="mensaje" id="mansaje" cols="50" rows="10" required></textarea>                      
+                    </div>
+            </fieldset>
+            <fieldset>
+                <legend>País</legend>
+                    <div class="campo">
+                        <label for="país">País</label>
+                        <select id="país">
+                            <option>-- Seleccione --</option>
+                            <option value="ES">España</option>
+                            <option value="AR">Argentina</option>
+                            <option value="RU">Reino Unido</option>
+                            <option value="AL">Alemania</option>
+                            <option value="BL">Bélgica</option>
+                            <option value="CL">Colombia</option>
+                            <option value="MX">México</option>
+                        </select>
+                    </div>
+            </fieldset>
+            <fieldset>
+                <legend>Información extra</legend>
+                <div class="campo">
+                    <label for="cliente">Cliente</label>
+                     <input id="cliente" type="radio" name="tipo" value="cliente"> <!-- PONGO UN NAME DIFERENTE PARA QUE SÓLO SE PUEDA SELECCIONAR UNA OPCIÓN. TAMBIEN PUEDO PONER CHECKBOX EN VEZ DE TIPO RADIO. EL VALUE ES LA INFORMACIÓN QUE LE LLEGARÁ A LA BASE DE DATOS -->
+                </div>
+                <div class="campo">
+                    <label for="proveedor">Proveedor</label>
+                    <input id="proveedor" type="radio" name="tipo" value="proveedor">
+                </div>
+                <div class="campo">
+                    <label for="categoria">Categoría de interés</label>
+                    <input list="categorias" name="categorias">
+                    <datalist id="categorias">
+                        <option value="Cocina">
+                        <option value="Salón">
+                        <option value="Jardín">
+                        <option value="Baño">
+                    </datalist>
+                </div>  
+            </fieldset>
+            <input class="btn" type="submit" value="Enviar formulario"> <!-- ALTERNATIVA: <button type="submit">Enviar formulario</button> -->
+        </form>
     </main>
 
     <!-- FOOTER -->
