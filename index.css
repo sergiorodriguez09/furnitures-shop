@@ -86,7 +86,7 @@ header {
 /* HERO */
 
 .hero {
-    background-image: url(./assets/principal.jpg);
+    background-image: url(./assets/pexels-jean-van-der-meulen-1457842.jpg);
     background-repeat: no-repeat; /* LA IMAGEN DE FONDO, AL TERMINAR, NO SE REPITE*/
     background-size: cover; /* LA IMAGEN SE ESTIRA COMPLETANDO EL ANCHO DE LA PANTALLA */
     /* background-position: 1px 1px; EL PRIMER VALOR MUEVE LA IMAGEN A LA IZQUIERDA Y A LA DERECHA, Y EL SEGUNDO ARRIBA Y ABAJO */
@@ -150,7 +150,7 @@ header {
 }
 
 .main-content h2 {
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .product {
